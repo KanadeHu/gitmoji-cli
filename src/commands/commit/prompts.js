@@ -7,6 +7,7 @@ import filterGitmojis from '@utils/filterGitmojis'
 import getDefaultCommitContent from '@utils/getDefaultCommitContent'
 import { type CommitOptions } from '.'
 import guard from './guard'
+import prefixs from './prefixs'
 
 const TITLE_MAX_LENGTH_COUNT: number = 48
 
@@ -34,8 +35,19 @@ export default (
 
   return [
     {
+      name: 'prefix',
+      message: 'Choose commit prefix:',
+      type: 'autocomplete',
+      source: (answersSoFor: any, input: string) => {
+        const list = input
+          ? prefixs.filter((i) => i.name.indexOf(input) >= 0)
+          : prefixs
+        return Promise.resolve(list)
+      }
+    },
+    {
       name: 'gitmoji',
-      message: 'Choose a gitmoji:',
+      message: 'Choose a emoji:',
       type: 'autocomplete',
       source: (answersSoFor: any, input: string) => {
         return Promise.resolve(

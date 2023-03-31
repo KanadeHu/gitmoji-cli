@@ -2,18 +2,19 @@
   "name": "gitmoji-cli",
   "version": "8.0.0",
   "type": "module",
-  "description": "A gitmoji client for using emojis on commit messages.",
+  "description": "Fork from repository, A km client for using emojis on commit messages.",
   "engines": {
     "node": ">=16"
   },
   "bin": {
-    "gitmoji": "lib/cli.js"
+    "km": "lib/cli.js"
   },
   "files": [
     "lib"
   ],
   "scripts": {
     "build": "babel src -d lib",
+    "dev": "babel src -d lib -w",
     "clean": "rm -rf lib",
     "coverage": "codecov",
     "flow": "flow",

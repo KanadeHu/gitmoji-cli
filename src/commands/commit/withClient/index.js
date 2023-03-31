@@ -13,6 +13,7 @@ const withClient = async (answers: Answers): Promise<void> => {
     const title = `${answers.gitmoji} ${scope}${answers.title}`
     const isAutoAddEnabled = configurationVault.getAutoAdd()
 
+    console.log(answers, '选中内容')
     if (await isHookCreated()) {
       return console.log(
         chalk.red(
