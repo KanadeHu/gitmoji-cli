@@ -10,7 +10,7 @@ import { type Answers } from '../prompts'
 const withClient = async (answers: Answers): Promise<void> => {
   try {
     const scope = answers.scope ? `(${answers.scope}): ` : ''
-    const title = `${answers.gitmoji} ${scope}${answers.title}`
+    const title = `${answers.prefix}${answers.gitmoji} ${scope}${answers.title}`
     const isAutoAddEnabled = configurationVault.getAutoAdd()
 
     console.log(answers, '选中内容')

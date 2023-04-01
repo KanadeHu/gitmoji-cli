@@ -1,11 +1,9 @@
 // @flow
-import chalk from 'chalk'
-import fetch from 'node-fetch'
 import ora from 'ora'
 
 import cache from './emojisCache'
-import buildFetchOptions from './buildFetchOptions'
-import configurationVault from './configurationVault'
+
+import { emojis } from './emoji'
 
 const getEmojis = async (
   skipCache: boolean = false
@@ -17,13 +15,6 @@ const getEmojis = async (
   const spinner = ora('Fetching gitmojis').start()
 
   try {
-    const response = await fetch(
-      configurationVault.getGitmojisUrl(),
-      buildFetchOptions()
-    )
-    const data = await response.json()
-    const emojis = data.gitmojis
-
     cache.createEmojis(emojis)
 
     if (emojis.length === emojisFromCache.length) {

@@ -21,6 +21,7 @@ export type Gitmoji = {
 }
 
 export type Answers = {
+  prefix: string,
   gitmoji: string,
   scope?: string,
   title: string,

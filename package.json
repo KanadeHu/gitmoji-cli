@@ -1,8 +1,8 @@
 {
-  "name": "gitmoji-cli",
+  "name": "km-cli",
   "version": "8.0.0",
   "type": "module",
-  "description": "Fork from repository, A km client for using emojis on commit messages.",
+  "description": "Fork from gitmoji repository, A km client for using emojis on commit messages.",
   "engines": {
     "node": ">=16"
   },
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carloscuesta/gitmoji-cli.git"
+    "url": "https://github.com/KanadeHu/gitmoji-cli"
   },
   "keywords": [
     "gitmoji",
@@ -41,9 +41,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carloscuesta/gitmoji-cli/issues"
+    "url": "https://github.com/KanadeHu/gitmoji-cli/issues"
   },
-  "homepage": "https://github.com/carloscuesta/gitmoji-cli#readme",
+  "homepage": "https://github.com/KanadeHu/gitmoji-cli#readme",
   "dependencies": {
     "chalk": "^5.0.1",
     "conf": "11.0.1",
@@ -111,15 +111,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "funding": [
-    {
-      "type": "Github Sponsors",
-      "url": "https://github.com/sponsors/carloscuesta"
-    },
-    {
-      "type": "Paypal",
-      "url": "https://paypal.me/carloscuesta"
-    }
-  ]
+  }
 }
