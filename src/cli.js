@@ -17,7 +17,7 @@ updateNotifier({ pkg: JSON.parse(packageJson) }).notify({ isGlobal: true })
 const cli = meow(
   `
   Usage
-    $ gitmoji
+    $ km
   Options
     --${FLAGS.COMMIT}, -c    Interactively commit using the prompts
     --${FLAGS.CONFIG}, -g    Setup gitmoji-cli preferences.
@@ -28,8 +28,8 @@ const cli = meow(
     --${FLAGS.UPDATE}, -u    Sync emoji list with the repo
     --${FLAGS.VERSION}, -v   Print gitmoji-cli installed version
   Examples
-    $ gitmoji -l
-    $ gitmoji bug linter -s
+    $ km -l
+    $ km bug linter -s
 `,
   {
     importMeta: { url: import.meta.url },
