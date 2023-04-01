@@ -1,6 +1,6 @@
 {
-  "name": "km-cli",
-  "version": "8.0.0",
+  "name": "gitkm-cli",
+  "version": "1.0.0",
   "type": "module",
   "description": "Fork from gitmoji repository, A km client for using emojis on commit messages.",
   "engines": {

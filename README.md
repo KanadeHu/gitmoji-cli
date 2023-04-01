@@ -9,14 +9,14 @@ This project provides an easy solution for using [**gitmoji**](https://github.co
 ### npm
 
 ```bash
-npm i -g km-cli
+npm i -g gitkm-cli
 ```
 
 
 ## Usage
 
 ```bash
-gitmoji --help
+km --help
 ```
 
 ```
